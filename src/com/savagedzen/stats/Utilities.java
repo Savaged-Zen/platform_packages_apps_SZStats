@@ -19,8 +19,13 @@ import android.preference.PreferenceScreen;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.content.pm.ResolveInfo;
+import android.provider.Settings;
+import android.os.Build;
 
 public class Utilities {
+
+    private static final String TAG = "Utilities";
+
     public static String getUniqueID(Context ctx){
         TelephonyManager tm = (TelephonyManager) ctx.getSystemService(Context.TELEPHONY_SERVICE);
 
@@ -74,7 +79,7 @@ public class Utilities {
     }
 
     public static String getKernelVersion() {
-        return SystemProperties.getFormattedKernelVersion();
+        return findPreference("kernel_version").setSummary(getFormattedKernelVersion());
     }
 
     public static String digest(String input) {
