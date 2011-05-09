@@ -84,6 +84,7 @@ public class ReportingService extends Service {
         String deviceId = Utilities.getUniqueID(getApplicationContext());
         String deviceName = Utilities.getDevice();
         String deviceVersion = Utilities.getModVersion();
+        String KernelVersion = Utilities.getKVersion();
         String deviceCountry = Utilities.getCountryCode(getApplicationContext());
         String deviceCarrier = Utilities.getCarrier(getApplicationContext());
         String deviceCarrierId = Utilities.getCarrierId(getApplicationContext());
@@ -91,6 +92,7 @@ public class ReportingService extends Service {
         Log.d(TAG, "SERVICE: Device ID=" + deviceId);
         Log.d(TAG, "SERVICE: Device Name=" + deviceName);
         Log.d(TAG, "SERVICE: Device Version=" + deviceVersion);
+        Log.d(TAG, "SERVICE: Kernel Version=" + KernelVersion);
         Log.d(TAG, "SERVICE: Country=" + deviceCountry);
         Log.d(TAG, "SERVICE: Carrier=" + deviceCarrier);
         Log.d(TAG, "SERVICE: Carrier ID=" + deviceCarrierId);
@@ -102,6 +104,7 @@ public class ReportingService extends Service {
             kv.add(new BasicNameValuePair("device_hash", deviceId));
             kv.add(new BasicNameValuePair("device_name", deviceName));
             kv.add(new BasicNameValuePair("device_version", deviceVersion));
+            kv.add(new BasicNameValuePair("kernel_version", KernelVersion));
             kv.add(new BasicNameValuePair("device_country", deviceCountry));
             kv.add(new BasicNameValuePair("device_carrier", deviceCarrier));
             kv.add(new BasicNameValuePair("device_carrier_id", deviceCarrierId));
