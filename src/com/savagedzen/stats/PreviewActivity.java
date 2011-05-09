@@ -22,12 +22,15 @@ public class PreviewActivity extends Activity {
         
         mIdText = (TextView) findViewById(R.id.preview_id_value);
         mIdText.setText(Utilities.getUniqueID(getApplicationContext()));
-
+       
         mDeviceText = (TextView) findViewById(R.id.preview_device_value);
         mDeviceText.setText(Utilities.getDevice());
         
         mVersionText = (TextView) findViewById(R.id.preview_version_value);
         mVersionText.setText(Utilities.getModVersion());
+        
+        mVersionText = (TextView) findViewById(R.id.preview_kernel_version_value);
+        mVersionText.setText(Utilities.getKernelVersion());
         
         mCountryText = (TextView) findViewById(R.id.preview_country_value);
         mCountryText.setText(Utilities.getCountryCode(getApplicationContext()));

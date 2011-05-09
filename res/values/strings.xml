@@ -24,7 +24,8 @@
     <string name="preview_title">Data Submission Preview</string>
     <string name="preview_id_lbl">Unique ID</string>
     <string name="preview_device_lbl">Device</string>
-    <string name="preview_version_lbl">Version</string>
+    <string name="preview_version_lbl">ROM Version</string>
+    <string name="preview_version_lbl">Kernel Version</string>
     <string name="preview_done_btn">Done</string>
     <string name="preview_country_lbl">Country</string>
     <string name="preview_carrier_lbl">Carrier</string>
