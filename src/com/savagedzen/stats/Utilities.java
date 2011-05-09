@@ -88,21 +88,31 @@ public class Utilities {
         try {
             BufferedReader reader = new BufferedReader(new FileReader("/proc/version"), 256);
             try {
-                int position = 0;
-                procVersionStr = reader.readLine();
-                procVersionStr = procVersionStr.replaceFirst("Linux", "");
-                procVersionStr = procVersionStr.replaceFirst("version", "");
+                int position = 0; // position of the first blank
+		procVersionStr = reader.readLine();
+		procVersionStr = procVersionStr.replaceFirst("Linux", "");
+		procVersionStr = procVersionStr.replaceFirst("version", "");
+		procVersionStr = procVersionStr.trim();
+
+		for (int i = 0; i < procVersionStr.length(); i++)
+			// Mark position of the first blank
+			if (procVersionStr.charAt(i) == ' ') {
+				position = i;
+				break;
+			}
+
+		char[] cutstring = new char[position];
+
+		// Truncate everything after the first blank
+		for (int j = 0; j < position; j++)
+			cutstring[j] = procVersionStr.charAt(j);
+
+		// Remove the trailing '+' that newer kernels have
+		if (cutstring[position-1] == '+')
+			cutstring[position-1] = ' ';
+
+		procVersionStr = new String(cutstring);
                 procVersionStr = procVersionStr.trim();
-                  for (int i=0; i < procVersionStr.length(); i++)
-		       if (procVersionStr.charAt(i) == ' ')
-		           position = i;
-
-	                   char[] newstring = new char[position];
-
-                  for (int j = 0; j < position; j++)
-		      newstring[j] = procVersionStr.charAt(j);
-
-               procVersionStr = new String(newstring);
 
             } finally {
                 reader.close();
