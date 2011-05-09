@@ -83,19 +83,6 @@ public class Utilities {
     }
 
     public static String getKernelVersion() {
-        return getFormattedKernelVersion();
-    }
-
-    public static String digest(String input) {
-        try {
-            MessageDigest md = MessageDigest.getInstance("MD5");
-            return new BigInteger(1, md.digest(input.getBytes())).toString(16).toUpperCase();
-        } catch (Exception e) {
-            return null;
-        }
-    }
-
-    private String getFormattedKernelVersion() {
         String procVersionStr;
 
         try {
@@ -137,6 +124,16 @@ public class Utilities {
                 e);
 
             return "Unavailable";
+        }
+
+    }
+
+    public static String digest(String input) {
+        try {
+            MessageDigest md = MessageDigest.getInstance("MD5");
+            return new BigInteger(1, md.digest(input.getBytes())).toString(16).toUpperCase();
+        } catch (Exception e) {
+            return null;
         }
     }
 
