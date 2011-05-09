@@ -12,7 +12,7 @@ import android.preference.PreferenceActivity;
 import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
 import android.telephony.TelephonyManager;
-
+import android.util.Log;
 
 
 public class Utilities {
