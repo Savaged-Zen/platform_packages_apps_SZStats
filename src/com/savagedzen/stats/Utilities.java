@@ -69,7 +69,7 @@ public class Utilities {
     }
 
     public static String getKernelVersion() {
-        return findPreference("kernel_version").setSummary(getFormattedKernelVersion());
+        return SystemProperties.getFormattedKernelVersion();
     }
 
     public static String digest(String input) {
