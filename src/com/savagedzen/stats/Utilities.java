@@ -9,6 +9,8 @@ import java.util.regex.Matcher;
 import java.io.InputStreamReader;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.List;
 
 import android.content.Context;
 import android.os.SystemProperties;
@@ -21,6 +23,8 @@ import android.util.Log;
 import android.content.pm.ResolveInfo;
 import android.provider.Settings;
 import android.os.Build;
+import android.content.ComponentName;
+import android.content.Intent;
 
 public class Utilities {
 

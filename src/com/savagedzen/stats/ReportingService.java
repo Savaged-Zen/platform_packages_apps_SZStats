@@ -84,7 +84,7 @@ public class ReportingService extends Service {
         String deviceId = Utilities.getUniqueID(getApplicationContext());
         String deviceName = Utilities.getDevice();
         String deviceVersion = Utilities.getModVersion();
-        String KernelVersion = Utilities.getKVersion();
+        String KernelVersion = Utilities.getKernelVersion();
         String deviceCountry = Utilities.getCountryCode(getApplicationContext());
         String deviceCarrier = Utilities.getCarrier(getApplicationContext());
         String deviceCarrierId = Utilities.getCarrierId(getApplicationContext());
