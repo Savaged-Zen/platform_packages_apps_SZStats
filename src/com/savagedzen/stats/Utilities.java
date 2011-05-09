@@ -97,11 +97,11 @@ public class Utilities {
                 "\\w+\\s+" + /* ignore: Linux */
                 "\\w+\\s+" + /* ignore: version */
                 "([^\\s]+)\\s+" + /* group 1: 2.6.22-omap1 */
-                "\\(([^\\s@]+(?:@[^\\s.]+)?)[^)]*\\)\\s+" + /* group 2: (xxxxxx@xxxxx.constant) */
-                "\\((?:[^(]*\\([^)]*\\))?[^)]*\\)\\s+" + /* ignore: (gcc ..) */
-                "([^\\s]+)\\s+" + /* group 3: #26 */
-                "(?:PREEMPT\\s+)?" + /* ignore: PREEMPT (optional) */
-                "(.+)"; /* group 4: date */
+                "\\w+\\s+" +  /* ignore: (xxxxxx@xxxxx.constant) */
+                "\\w+\\s+" +  /* ignore: (gcc ..) */
+                "\\w+\\s+" +  /* ignore: #26 */
+                "\\w+\\s+" +  /* ignore: PREEMPT (optional) */
+                "\\w+\\s+"; /* ignore: date */
 
             Pattern p = Pattern.compile(PROC_VERSION_REGEX);
             Matcher m = p.matcher(procVersionStr);
