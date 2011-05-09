@@ -4,6 +4,11 @@ import java.math.BigInteger;
 import java.net.NetworkInterface;
 import java.security.MessageDigest;
 import java.io.FileReader;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+import java.io.InputStreamReader;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
 
 import android.content.Context;
 import android.os.SystemProperties;
@@ -13,7 +18,7 @@ import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
 import android.telephony.TelephonyManager;
 import android.util.Log;
-
+import android.content.pm.ResolveInfo;
 
 public class Utilities {
     public static String getUniqueID(Context ctx){
