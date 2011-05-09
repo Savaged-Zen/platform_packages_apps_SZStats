@@ -1,4 +1,4 @@
-package com.cyanogenmod.stats;
+package com.savagedzen.stats;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,8 +21,8 @@ import android.os.IBinder;
 import android.util.Log;
 
 public class ReportingService extends Service {
-    private static final String PREF_NAME = "CMStats";
-    private static final String TAG = "CMStats";
+    private static final String PREF_NAME = "SZStats";
+    private static final String TAG = "SZStats";
 
     @Override
     public IBinder onBind(Intent intent) {
@@ -96,7 +96,7 @@ public class ReportingService extends Service {
         Log.d(TAG, "SERVICE: Carrier ID=" + deviceCarrierId);
 
         HttpClient httpclient = new DefaultHttpClient();
-        HttpPost httppost = new HttpPost("http://stats.cyanogenmod.com/submit");
+        HttpPost httppost = new HttpPost("http://stats.savaged-zen.com/submit");
         try {
             List<NameValuePair> kv = new ArrayList<NameValuePair>(5);
             kv.add(new BasicNameValuePair("device_hash", deviceId));

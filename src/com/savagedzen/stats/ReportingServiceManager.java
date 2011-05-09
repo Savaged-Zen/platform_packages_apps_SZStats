@@ -1,4 +1,4 @@
-package com.cyanogenmod.stats;
+package com.savagedzen.stats;
 
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
@@ -10,11 +10,11 @@ import android.os.Bundle;
 import android.util.Log;
 
 public class ReportingServiceManager extends BroadcastReceiver {
-    private static final String TAG = "CMStats";
+    private static final String TAG = "SZStats";
 
     @Override
     public void onReceive(Context ctx, Intent intent) {
-        SharedPreferences settings = ctx.getSharedPreferences("CMStats", 0);
+        SharedPreferences settings = ctx.getSharedPreferences("SZStats", 0);
         SharedPreferences.Editor editor = settings.edit();
         
         if (intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)) {

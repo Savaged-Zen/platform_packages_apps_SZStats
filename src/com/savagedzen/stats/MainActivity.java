@@ -1,4 +1,4 @@
-package com.cyanogenmod.stats;
+package com.savagedzen.stats;
 
 import android.app.Activity;
 import android.app.NotificationManager;
@@ -19,7 +19,7 @@ import android.widget.TextView;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 
 public class MainActivity extends Activity {
-    private static final String PREF_NAME = "CMStats";
+    private static final String PREF_NAME = "SZStats";
 
     private CheckBox mCheckbox;
     private Button mPreviewButton;
@@ -71,7 +71,7 @@ public class MainActivity extends Activity {
         mStatsButton = (Button) findViewById(R.id.main_show_stats);
         mStatsButton.setOnClickListener(new OnClickListener(){
             public void onClick(View arg0) {
-                Uri uri = Uri.parse("http://cyanogenmod.com/stats");
+                Uri uri = Uri.parse("http://savaged-zen.com/stats");
                 startActivity(new Intent(Intent.ACTION_VIEW, uri));
             }
         });

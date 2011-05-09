@@ -1,4 +1,4 @@
-package com.cyanogenmod.stats;
+package com.savagedzen.stats;
 
 import android.app.Activity;
 import android.os.Bundle;

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">CMStats</string>
+    <string name="app_name">SZStats</string>
 
     <!-- Main -->
     <string name="main_title">Anonymous Usage Data</string>
     <string name="main_desc">Opt-ing in to anonymous usage data submission
         allows
-        the developers of CyanogenMod to track unique installations
+        the developers of SavagedZen to track unique installations
         across
         devices. Information submitted includes a unique identifier,
         which
@@ -31,7 +31,7 @@
 
     <!-- Notification -->
     <string name="notification_ticker">Statistics Opted-In</string>
-    <string name="notification_title">CyanogenMod Statistics</string>
+    <string name="notification_title">SavagedZen Statistics</string>
     <string name="notification_desc">Enable or Disable Anonymous Statistics</string>
-    <string name="main_link">&lt;a href=&quot;http://www.cyanogenmod.com/blog/cmstats-what-it-is-and-why-you-should-opt-in&quot;&gt;Learn More&lt;/a&gt;</string>
+    <string name="main_link">&lt;a href=&quot;http://www.savaged-zen.com&quot;&gt;&lt;/a&gt;</string>
 </resources>

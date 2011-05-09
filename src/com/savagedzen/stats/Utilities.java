@@ -1,4 +1,4 @@
-package com.cyanogenmod.stats;
+package com.savagedzen.stats;
 
 import java.math.BigInteger;
 import java.net.NetworkInterface;
